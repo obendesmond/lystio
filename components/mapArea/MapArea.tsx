@@ -10,6 +10,7 @@ import MapViewAndPlanner from './mapControls/MapViewAndPlanner';
 import { useAppContext } from '@/context/AppContext';
 import { Listing } from '@/types';
 
+// TODO: be here for now, soon move to .env
 const MAPBOX_TOKEN = 'pk.eyJ1IjoibHlzdGlvIiwiYSI6ImNtMjA3cmFoejBnMngycXM4anNuNXFmaTQifQ.y-WiEerYZrFOm8Xd8a7GwQ';
 
 const MapArea: React.FC = () => {
@@ -63,23 +64,14 @@ const MapArea: React.FC = () => {
   return (
     <div className="flex-[0.5] h-full relative">
       <Map
-        // initialViewState={{
-        //   longitude: grandLocation ? grandLocation.pt[0] : -122.4,
-        //   latitude: grandLocation ? grandLocation.pt[1] : 37.8,
-        //   zoom: 10,
-        // }}
         ref={mapRef}
         style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/satellite-streets-v11"
         mapboxAccessToken={MAPBOX_TOKEN}
       >
         <ZoomControls />
-
-        {/* Draw Control */}
         <MapDrawControl />
-
         <MapViewAndPlanner />
-
         {listings?.map((l) => (
           <LocationMarker
             key={l.id}

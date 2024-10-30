@@ -72,17 +72,6 @@ const MapDrawControl: React.FC = () => {
           gap: 8px;
           z-index: 10;
         }
-        .map-draw-controls button {
-          background: white;
-          border: none;
-          border-radius: 4px;
-          padding: 8px;
-          cursor: pointer;
-          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-        }
-        .map-draw-controls button:hover {
-          background: #f0f0f0;
-        }
       `}</style>
     </>
   );
