@@ -17,7 +17,7 @@ function Search() {
           <BodyText>AI Search</BodyText>
           <CustomIcon Icon={MdOutlineKeyboardArrowDown} />
         </div>
-        <div className="rounded-full p-2 bg-ly-purple inline-block cursor-pointer">
+        <div className="rounded-full p-2 bg-ly-purple hover:bg-ly-voilet inline-block cursor-pointer">
           <CustomIcon Icon={RiSearch2Line} size={24} className="text-ly-white" />
         </div>
       </div>
